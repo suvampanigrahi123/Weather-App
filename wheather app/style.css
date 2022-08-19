@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('./bg.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+}
+.weather{
+    z-index: 2;
+    display: flex;
+    padding: 3rem;
+    color: white;
+}
+.weather p{
+    margin: 0.5rem;
+    font: 400 1.9vmax "Roboto";
+}
+.weather3 img{
+    width: 2rem;
+}
+.weather span{
+    font: 500 1.9vmax "Roboto";
+    margin: 0.5vmax;
+}
+.serachField{
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    background: #653c27;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.24);
+}
+form{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    width: 70%;
+}
+form input{
+    padding: 0.6vmax 1vmax;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-bottom: 2px solid white;
+    margin-right: 0.4vmax;
+}
+form button{
+    outline: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+form button:hover{
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.12);
+    background-color: white;
+    color: black;
+    border: none;
+}
+@media screen and (max-width:600px) {
+    .weather{
+        margin-bottom: 10vmax;
+    }
+    .serachField{
+        height: 20%;
+        border-radius: none;
+    }
+}
